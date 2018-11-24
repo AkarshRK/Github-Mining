@@ -3,12 +3,12 @@ from collections import OrderedDict
 from urllib2 import urlopen, Request 
 import getpass
 import javalang
-import ast
 import csv
 import os
 
 def download_url_content(url):
-  token = "6589cc4152bbd974233939c5a5e71977cb9c8018"
+  # removed token for commit purpose
+  token = ""
 
   request = Request(url)
   request.add_header('Authorization', 'token %s' % token)
@@ -18,9 +18,13 @@ def download_url_content(url):
 def get_str_method_signature(meth_name, parameters_list):
   method_sig = meth_name + " " + "( "
   for parameter in parameters_list:
+      parameter_type = parameter.type
+      dimension = '[]'*len(parameter_type.dimensions)
       method_sig += parameter.type.name + " " + \
+                    dimension + " " + \
                     parameter.name + ", "
-  method_sig = method_sig[:-2]
+  if(len(parameters_list)>0):
+    method_sig = method_sig[:-2]
   method_sig += " )"
   return method_sig
 
@@ -32,30 +36,23 @@ def main():
   repo = g.get_repo(repo_name)
   all_commits = repo.get_commits()
   abs_path = os.path.abspath("report")
-  csv_filename = '_'.join(repo_name.split('/')[-1]) + '.csv'
-  report = []
 
+  outcsv = open(abs_path + "/" + "report.csv", 'wb')
+  writer = csv.writer(outcsv)
+  writer.writerow(["Commit SHA", "Java File", "Old function signature", "New function signature"])
 
-  for index in range(1,70):
+  for index in range(1,len(list(all_commits))):
      print "Processing: ", index
-     print "Latest commit msg: ", all_commits[index-1].commit.message, "\n"
+     #print "Latest commit msg: ", all_commits[index-1].commit.message, "\n"
      comp = repo.compare(all_commits[index].sha, all_commits[index-1].sha)
 
      for file in comp.files:
        if file.filename.split('.')[-1] == 'java':
-          contents_url = file.contents_url
-          try:
-            # print "Content url: ", contents_url, "\n"
-            content_info = download_url_content(contents_url)
-          except:
-            print "Can't read content_URL\n"
-            continue
-          dic = ast.literal_eval(content_info)
 
           prev_changes_url = "https://raw.githubusercontent.com/" + repo_name + \
-                              "/" + all_commits[index].sha + "/" + dic['path']
+                              "/" + all_commits[index].sha + "/" + file.filename
           new_changes_url = "https://raw.githubusercontent.com/" + repo_name +  \
-                            "/" + all_commits[index-1].sha + "/" + dic['path']
+                            "/" + all_commits[index-1].sha + "/" + file.filename
 
           file_read_success = False
           try:
@@ -87,16 +84,10 @@ def main():
                       old_meth_sig = get_str_method_signature(node.name, old_methods_data[node.name]['method_node'].parameters)
                       print "Old Signature: ", old_meth_sig, "\n"
                       print "New Signature: ", new_meth_sig, "\n"
-                      report.append([all_commits[index].sha, file.filename, old_meth_sig, new_meth_sig])                                 
+                      writer.writerow([all_commits[index].sha, file.filename, old_meth_sig, new_meth_sig])
+
             except:
               print "Bad java code\n"
-
-  with open(abs_path + "/" + csv_filename, 'wb') as outcsv:
-      writer = csv.writer(outcsv)
-      writer.writerow(["Commit SHA", "Java File", "Old function signature", "New function signature"])
-      for row in report:
-        print "Report:  ", row, "\n"
-        writer.writerow(row)
 
 
 if __name__ == "__main__":

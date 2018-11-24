@@ -1,3 +1,0 @@
-Commit SHA,Java File,Old function signature,New function signature
-69279375d40bcfc315071ee7b97a926ca105ad43,Others/GCD.java,gcd ( int number ),"gcd ( int num1, int num2 )"
-6d76e33c1973045f7c3cd91ef166de42170f1944,Others/GCD.java,gcd ( int number ),"gcd ( int num1, int num2 )"
