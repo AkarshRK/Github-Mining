@@ -35,7 +35,7 @@ def get_url(repo_name, commit_sha, file_path):
 
 def download_url_content(url):
    # removed token for commit purpose
-   token = "0e95e198ac123e1a336eb8cfad227523fd00d189"
+   token = ""
 
    request = Request(url)
    request.add_header('Authorization', 'token %s' % token)
