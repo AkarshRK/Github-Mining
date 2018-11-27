@@ -21,12 +21,13 @@ def get_valid_filename(repo_name):
 def check_ratelimit(git_instance):
   remaining, total = git_instance.rate_limiting
   print "You have ", remaining, " api request\n" 
-  if remaining > 4995:
+  if remaining < 10:
    reset_time = datetime.fromtimestamp(git_instance.rate_limiting_resettime)
    current_time = datetime.utcnow()
    total_wait_seconds = (reset_time - current_time).total_seconds()
-   print "Total seconds to wait: ", total_wait_seconds
-   time.sleep(total_wait_seconds)
+   if total_wait_seconds>0:
+    print "Total seconds to wait: ", total_wait_seconds
+    time.sleep(total_wait_seconds)
 
 def get_url(repo_name, commit_sha, file_path):
   return "https://raw.githubusercontent.com/" + repo_name + \
@@ -35,7 +36,7 @@ def get_url(repo_name, commit_sha, file_path):
 
 def download_url_content(url):
    # removed token for commit purpose
-   token = ""
+   token = "995679a2a0e66b1e5f7076fbe04e5be86c0736ce"
 
    request = Request(url)
    request.add_header('Authorization', 'token %s' % token)
@@ -90,44 +91,43 @@ def main():
        for file in comp.files:
          if file.filename.split('.')[-1] == 'java':
 
-	    prev_changes_url = get_url(repo_name, all_commits[index].sha, file.filename)
-	    new_changes_url = get_url(repo_name, all_commits[index-1].sha, file.filename)
+            prev_changes_url = get_url(repo_name, all_commits[index].sha, file.filename)
+            new_changes_url = get_url(repo_name, all_commits[index-1].sha, file.filename)
 
-	    file_read_success = False
-	    try:
-	      ver_one_src_code = download_url_content(prev_changes_url)
-	      ver_two_src_code = download_url_content(new_changes_url)
-	      file_read_success = True
-	    except HTTPError as e:
-              print e.message
-	      file_read_success = False
+            file_read_success = False
+            try:
+              ver_one_src_code = download_url_content(prev_changes_url)
+              ver_two_src_code = download_url_content(new_changes_url)
+              file_read_success = True
+            except HTTPError as e:
+              file_read_success = False
 
-	    if(file_read_success):
-	      try:
-	        old_syntax_tree = javalang.parse.parse(ver_one_src_code)
-	        new_syntax_tree = javalang.parse.parse(ver_two_src_code)
+            if(file_read_success):
+              try:
+                old_syntax_tree = javalang.parse.parse(ver_one_src_code)
+                new_syntax_tree = javalang.parse.parse(ver_two_src_code)
 
-	        old_methods_data = OrderedDict()
+                old_methods_data = OrderedDict()
                 print "Java source code parsed successfully\n"
 
-	        for path, node in old_syntax_tree.filter(javalang.tree.MethodDeclaration):
-		  old_methods_data[node.name] = {
-		    'no_of_parameters': len(node.parameters),
-		    'method_node': node
-		  }
-		
-	        for path, node in new_syntax_tree.filter(javalang.tree.MethodDeclaration):
-		    if node.name in old_methods_data:
-		      if len(node.parameters) > old_methods_data[node.name]['no_of_parameters']:
-		        print "Warning: Parameter count increased in ", node.name, "\n"
-		        new_meth_sig = get_str_method_signature(node.name, node.parameters)
-		        old_meth_sig = get_str_method_signature(node.name, old_methods_data[node.name]['method_node'].parameters)
-		        print "Old Signature: ", old_meth_sig, "\n"
-		        print "New Signature: ", new_meth_sig, "\n"
-		        writer.writerow([all_commits[index].sha, file.filename, old_meth_sig, new_meth_sig])
+                for path, node in old_syntax_tree.filter(javalang.tree.MethodDeclaration):
+                  old_methods_data[node.name] = {
+                    'no_of_parameters': len(node.parameters),
+                    'method_node': node
+                  }
+          
+                for path, node in new_syntax_tree.filter(javalang.tree.MethodDeclaration):
+                  if node.name in old_methods_data:
+                    if len(node.parameters) > old_methods_data[node.name]['no_of_parameters']:
+                      print "Warning: Parameter count increased in ", node.name, "\n"
+                      new_meth_sig = get_str_method_signature(node.name, node.parameters)
+                      old_meth_sig = get_str_method_signature(node.name, old_methods_data[node.name]['method_node'].parameters)
+                      print "Old Signature: ", old_meth_sig, "\n"
+                      print "New Signature: ", new_meth_sig, "\n"
+                      writer.writerow([all_commits[index-1].sha, file.filename, old_meth_sig, new_meth_sig])
 
-	      except:
-	        print "Bad java source code\n"
+              except:
+                print "Bad java source code\n"
 
 
 if __name__ == "__main__":
