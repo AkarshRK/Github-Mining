@@ -4,8 +4,8 @@ A program that extracts all commits from GitHub repository and detects methods o
 `Note: The program requires a good internet connection.`
 
 Example:
-Method in previous commit: assertArrayEquals ( long [] expecteds, long [] actuals )
-Method in next commit: assertArrayEquals ( String  message, Object [] expecteds, Object [] actuals )
+* Method in previous commit: assertArrayEquals ( long [] expecteds, long [] actuals )
+* Method in next commit: assertArrayEquals ( String  message, Object [] expecteds, Object [] actuals )
 Here, the parameter count is increased from two to three in "assertArrayEquals". Such functions are detected by the program.
 ## Requirements
 ###### Python 2.7.14 
@@ -36,8 +36,8 @@ Checkout this repository:
 ```
 Add your `Personal API token` in the main.py source code. Then edit the `repositories.txt` file to add the name of the GitHub repositories that you would like to analyze. Now run the code as follows:
 ```
-    $ cd Github-Mining
-	$ python main.py
+$ cd Github-Mining
+$ python main.py
 ```
 	
 ## Results
@@ -54,5 +54,10 @@ The above program is executed and tested on following top Java repositories:
 | AkarshRK/Java-Prog | Short sample test code for Github-Mining project.| 9 |
 
 The report files can be found in "report/" directory.
+
+## The above project was run on a system with following configurations or settings:
+* Operating system: Linux Mint 18.3 "Sylvia" - Cinnamon (64-bit)
+* Processor: Intel® Core™ i7-7500U Processor  2.70GHz 2 Core(s)
+* Memory (RAM): 15.5 GB
 	
 
