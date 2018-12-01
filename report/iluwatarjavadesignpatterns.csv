@@ -1,0 +1,171 @@
+Commit SHA,Java File,Old function signature,New function signature
+922fd62da6db31426bdd39e05f7b6cfefd432c3d,throttling/src/main/java/com/iluwatar/throttling/App.java,makeServiceCalls ( Tenant  tenant ),"makeServiceCalls ( Tenant  tenant, CallsCount  callsCount )"
+d54e29051f85c6f2dbcabc9d04ac931309a0b602,monitor-object/src/main/java/com/iluwatar/monitor/AbstractMonitor.java,makeCondition ( String  name ),"makeCondition ( String  name, Assertion  prop )"
+ec28b1250d24510ed5c398ed8bddfc48e1262e62,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+ec28b1250d24510ed5c398ed8bddfc48e1262e62,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+ec28b1250d24510ed5c398ed8bddfc48e1262e62,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+ec28b1250d24510ed5c398ed8bddfc48e1262e62,front-controller/src/test/java/com/iluwatar/front/controller/CommandTest.java,testDisplay (  ),"testDisplay ( String  request, String  displayMessage )"
+ec28b1250d24510ed5c398ed8bddfc48e1262e62,front-controller/src/test/java/com/iluwatar/front/controller/FrontControllerTest.java,testDisplay (  ),"testDisplay ( Command  command, String  displayMessage )"
+ec28b1250d24510ed5c398ed8bddfc48e1262e62,front-controller/src/test/java/com/iluwatar/front/controller/ViewTest.java,testDisplay (  ),"testDisplay ( View  view, String  displayMessage )"
+6694d742a370e0f181530734481284de8d5dd8ef,front-controller/src/test/java/com/iluwatar/front/controller/CommandTest.java,testDisplay (  ),"testDisplay ( String  request, String  displayMessage )"
+6694d742a370e0f181530734481284de8d5dd8ef,front-controller/src/test/java/com/iluwatar/front/controller/FrontControllerTest.java,testDisplay (  ),"testDisplay ( Command  command, String  displayMessage )"
+6694d742a370e0f181530734481284de8d5dd8ef,front-controller/src/test/java/com/iluwatar/front/controller/ViewTest.java,testDisplay (  ),"testDisplay ( View  view, String  displayMessage )"
+6694d742a370e0f181530734481284de8d5dd8ef,intercepting-filter/src/test/java/com/iluwatar/intercepting/filter/FilterTest.java,testExecute (  ),"testExecute ( Filter  filter, Order  order, String  expectedResult )"
+6694d742a370e0f181530734481284de8d5dd8ef,intercepting-filter/src/test/java/com/iluwatar/intercepting/filter/FilterTest.java,testNext (  ),testNext ( Filter  filter )
+6694d742a370e0f181530734481284de8d5dd8ef,interpreter/src/test/java/com/iluwatar/interpreter/ExpressionTest.java,testInterpret (  ),"testInterpret ( NumberExpression  first, NumberExpression  second, int  result )"
+6694d742a370e0f181530734481284de8d5dd8ef,interpreter/src/test/java/com/iluwatar/interpreter/ExpressionTest.java,testToString (  ),"testToString ( NumberExpression  first, NumberExpression  second )"
+6694d742a370e0f181530734481284de8d5dd8ef,interpreter/src/test/java/com/iluwatar/interpreter/NumberExpressionTest.java,testFromString (  ),testFromString ( NumberExpression  first )
+6694d742a370e0f181530734481284de8d5dd8ef,iterator/src/test/java/com/iluwatar/iterator/TreasureChestTest.java,testIterator (  ),testIterator ( Item  expectedItem )
+6694d742a370e0f181530734481284de8d5dd8ef,iterator/src/test/java/com/iluwatar/iterator/TreasureChestTest.java,testGetItems (  ),testGetItems ( Item  expectedItem )
+6694d742a370e0f181530734481284de8d5dd8ef,mediator/src/test/java/com/iluwatar/mediator/PartyMemberTest.java,testPartyAction (  ),testPartyAction ( Supplier  memberSupplier )
+6694d742a370e0f181530734481284de8d5dd8ef,mediator/src/test/java/com/iluwatar/mediator/PartyMemberTest.java,testAct (  ),testAct ( Supplier  memberSupplier )
+6694d742a370e0f181530734481284de8d5dd8ef,mediator/src/test/java/com/iluwatar/mediator/PartyMemberTest.java,testToString (  ),testToString ( Supplier  memberSupplier )
+6694d742a370e0f181530734481284de8d5dd8ef,observer/src/test/java/com/iluwatar/observer/WeatherObserverTest.java,testObserver (  ),"testObserver ( WeatherType  weather, String  response )"
+6694d742a370e0f181530734481284de8d5dd8ef,observer/src/test/java/com/iluwatar/observer/generic/ObserverTest.java,testObserver (  ),"testObserver ( WeatherType  weather, String  response )"
+144db43ad4af09a708ddf53516a5f982d93ceecd,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+144db43ad4af09a708ddf53516a5f982d93ceecd,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+144db43ad4af09a708ddf53516a5f982d93ceecd,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+14279278cd2c57942af6effd2e0126badfc74133,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+14279278cd2c57942af6effd2e0126badfc74133,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+14279278cd2c57942af6effd2e0126badfc74133,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+933c84ff1c82ee4c0e3faa147f6160380e2bb817,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+933c84ff1c82ee4c0e3faa147f6160380e2bb817,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+933c84ff1c82ee4c0e3faa147f6160380e2bb817,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+3634b3338cc2fab6cfa147c9475b986165471b73,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+3634b3338cc2fab6cfa147c9475b986165471b73,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+3634b3338cc2fab6cfa147c9475b986165471b73,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+d37922bf823900f9ce319736927dfb2203808ded,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+d37922bf823900f9ce319736927dfb2203808ded,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+d37922bf823900f9ce319736927dfb2203808ded,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+6d3dce065d14c24dde2342c5ccdb031ef4132c63,partial-response/src/main/java/com/iluwatar/partialresponse/VideoResource.java,getDetails ( Integer  id ),"getDetails ( Integer  id, String  fields )"
+08cc50e875f049d227610b8c7866249f3aa554f4,dao/src/main/java/com/iluwatar/dao/DbCustomerDao.java,mutedClose ( Connection  connection ),"mutedClose ( Connection  connection, PreparedStatement  statement, ResultSet  resultSet )"
+6f1736d2e6421241e3e15ba764c3e5303962b6f9,dao/src/main/java/com/iluwatar/dao/DbCustomerDao.java,mutedClose ( Connection  connection ),"mutedClose ( Connection  connection, PreparedStatement  statement, ResultSet  resultSet )"
+68d094a84712d85370bdf723cc7b5309b72d1fb2,dao/src/main/java/com/iluwatar/dao/DbCustomerDao.java,mutedClose ( Connection  connection ),"mutedClose ( Connection  connection, PreparedStatement  statement, ResultSet  resultSet )"
+a1a40880873bc40f977a3cef7d5b9f45c70c9312,dao/src/main/java/com/iluwatar/dao/DbCustomerDao.java,mutedClose ( Connection  connection ),"mutedClose ( Connection  connection, PreparedStatement  statement, ResultSet  resultSet )"
+c94c8a3e74799c5dc83bd90d98669ad697e1087b,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+c94c8a3e74799c5dc83bd90d98669ad697e1087b,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+c94c8a3e74799c5dc83bd90d98669ad697e1087b,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+1d6d0c54a7126831208b5ca7fe5353fdcfef2880,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+1d6d0c54a7126831208b5ca7fe5353fdcfef2880,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+1d6d0c54a7126831208b5ca7fe5353fdcfef2880,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+faa29f8025f6fb90472dacb6e8ad8569605f8d61,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+faa29f8025f6fb90472dacb6e8ad8569605f8d61,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+faa29f8025f6fb90472dacb6e8ad8569605f8d61,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+3091ff21b00d4191d3d0b209c65a570c3f11209b,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+3091ff21b00d4191d3d0b209c65a570c3f11209b,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+3091ff21b00d4191d3d0b209c65a570c3f11209b,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+3091ff21b00d4191d3d0b209c65a570c3f11209b,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+e138163c4f1688678dc8bc43e9683b142d534fe7,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+e138163c4f1688678dc8bc43e9683b142d534fe7,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+e138163c4f1688678dc8bc43e9683b142d534fe7,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+e138163c4f1688678dc8bc43e9683b142d534fe7,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+27d6d500bcc5cf31f59f2f6efe26271c30462b3a,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+27d6d500bcc5cf31f59f2f6efe26271c30462b3a,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+27d6d500bcc5cf31f59f2f6efe26271c30462b3a,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+27d6d500bcc5cf31f59f2f6efe26271c30462b3a,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+0438811489c16948ad8418e9a3ce59bc10bd92c6,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+0438811489c16948ad8418e9a3ce59bc10bd92c6,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+0438811489c16948ad8418e9a3ce59bc10bd92c6,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+0438811489c16948ad8418e9a3ce59bc10bd92c6,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+59e6a0af853c8064735302bf8eae6847bb54f6f9,hexagonal/src/main/java/com/iluwatar/hexagonal/domain/LotteryTicket.java,"create ( PlayerDetails  details, LotteryNumbers  numbers )","create ( LotteryTicketId  id, PlayerDetails  details, LotteryNumbers  numbers )"
+626c56730c7dac32eb33bd414ad4a9436736a097,hexagonal/src/main/java/com/iluwatar/hexagonal/domain/LotteryTicket.java,"create ( PlayerDetails  details, LotteryNumbers  numbers )","create ( LotteryTicketId  id, PlayerDetails  details, LotteryNumbers  numbers )"
+9a9df80080250c3593621f4b2cbdffbccc374afa,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+9a9df80080250c3593621f4b2cbdffbccc374afa,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+9a9df80080250c3593621f4b2cbdffbccc374afa,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+49ca63087c0d4f1d4637b837f2d0138561614231,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+534fb67eb063e14bc16f911b7e9fe8a27f1a1a57,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+335737d7ddbff8a2f28038da9fea96d85213ce85,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+d631585fa88ec41b0bf839dc9e46b69921442026,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+d631585fa88ec41b0bf839dc9e46b69921442026,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+d631585fa88ec41b0bf839dc9e46b69921442026,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+474f2658eea4f44540f66ea74279d901c32e7e22,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+28d3cb2aa26a37d1595d69f241063e91d2ec994b,hexagonal/src/main/java/com/iluwatar/hexagonal/notifications/LotteryNotifications.java,notifyPrize ( PlayerDetails  details ),"notifyPrize ( PlayerDetails  details, int  prizeAmount )"
+11c0654103c3622474e5ae2f78a83701dbef8883,hexagonal/src/main/java/com/iluwatar/hexagonal/banking/WireTransfers.java,"transferFunds ( int  amount, String  receiverBankAccountNumber )","transferFunds ( int  amount, String  sourceBackAccount, String  destinationBankAccount )"
+e549af25dd8b2e028fa62adfde00d22daff9fa82,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+266b658ab5c103ec15f9c6a5c49163129387fbf1,hexagonal/src/main/java/com/iluwatar/hexagonal/domain/LotteryService.java,checkTicketForPrize ( LotteryTicket  ticket ),"checkTicketForPrize ( LotteryTicketId  id, LotteryNumbers  winningNumbers )"
+40e5c8d5879915f44d1bb9db3d8f1f3bd8d90c3c,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+984bf552cead84a32297c85fe5d8885ec8080281,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+35d6a548312c58b07bd9141f996f85d4be8f00df,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+046e13111991a4ba9e2cc23cfcc8481688fde6f2,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+3791a80978d126370c8be5be4d0f3b97925d23f4,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+9f086ba72c67439b7d5e1d39d01b3ab88f3d7b2e,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+9f086ba72c67439b7d5e1d39d01b3ab88f3d7b2e,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+9f086ba72c67439b7d5e1d39d01b3ab88f3d7b2e,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+ea81ef71ab21bd69b3e61ee27dbe406834a7d02f,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+ea81ef71ab21bd69b3e61ee27dbe406834a7d02f,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+ea81ef71ab21bd69b3e61ee27dbe406834a7d02f,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+50310aaeaf49d032816cb065248b3bf6a486d1d9,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+50310aaeaf49d032816cb065248b3bf6a486d1d9,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+50310aaeaf49d032816cb065248b3bf6a486d1d9,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+53fdaba6c46c4efb3a1340afc84205f37e71a255,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+53fdaba6c46c4efb3a1340afc84205f37e71a255,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+53fdaba6c46c4efb3a1340afc84205f37e71a255,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+cd077fa4903f89c99fe87cc2901528bc04d2a104,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+cd077fa4903f89c99fe87cc2901528bc04d2a104,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+cd077fa4903f89c99fe87cc2901528bc04d2a104,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+b5d4445d635ed35127fa4189ef75a2cd301b2370,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+b5d4445d635ed35127fa4189ef75a2cd301b2370,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+b5d4445d635ed35127fa4189ef75a2cd301b2370,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+57be8aa522f3e619f9919154b9f85e60600b6f65,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+57be8aa522f3e619f9919154b9f85e60600b6f65,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+57be8aa522f3e619f9919154b9f85e60600b6f65,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+7cc93de672223d38d69d48ebd986b2f876d244e5,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+7cc93de672223d38d69d48ebd986b2f876d244e5,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+7cc93de672223d38d69d48ebd986b2f876d244e5,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+dc4f07eb81cc363d1ed0b0051045707057ba4c78,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+dc4f07eb81cc363d1ed0b0051045707057ba4c78,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+dc4f07eb81cc363d1ed0b0051045707057ba4c78,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+3d956960789de9dd6c805d99f5dddd2febac5abf,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+3d956960789de9dd6c805d99f5dddd2febac5abf,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+3d956960789de9dd6c805d99f5dddd2febac5abf,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+fcadb223cebc8d24e896c02d2fa8ff1c1e8a7cf8,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+fcadb223cebc8d24e896c02d2fa8ff1c1e8a7cf8,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+fcadb223cebc8d24e896c02d2fa8ff1c1e8a7cf8,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+30676f8d4ff4611412e7d247bd0d1766e3578b61,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+30676f8d4ff4611412e7d247bd0d1766e3578b61,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+30676f8d4ff4611412e7d247bd0d1766e3578b61,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+df911baf368a480715c7f6e31b6cc7791f8c9748,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+df911baf368a480715c7f6e31b6cc7791f8c9748,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+df911baf368a480715c7f6e31b6cc7791f8c9748,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+fa6a6006c39c01a39d436dfc964f86fa88feda13,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+fa6a6006c39c01a39d436dfc964f86fa88feda13,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+fa6a6006c39c01a39d436dfc964f86fa88feda13,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+6b1356a1602a603c09e65a6a1807ab679dda0dea,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+6b1356a1602a603c09e65a6a1807ab679dda0dea,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+6b1356a1602a603c09e65a6a1807ab679dda0dea,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+cec9a99410a0544ff0f1a5853443ef9dcff0a9e7,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+cec9a99410a0544ff0f1a5853443ef9dcff0a9e7,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+cec9a99410a0544ff0f1a5853443ef9dcff0a9e7,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+ba3f58346758ab43338a4658b5f5ac9bb5c99882,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+ba3f58346758ab43338a4658b5f5ac9bb5c99882,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+ba3f58346758ab43338a4658b5f5ac9bb5c99882,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+5b06c52fffcb84f102e4ba2d84f55442c7adc399,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+5b06c52fffcb84f102e4ba2d84f55442c7adc399,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+5b06c52fffcb84f102e4ba2d84f55442c7adc399,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+34528173b734615d8adbf7df0accd2c1a78899fe,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+34528173b734615d8adbf7df0accd2c1a78899fe,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+34528173b734615d8adbf7df0accd2c1a78899fe,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+27199325ec5c45260b9ea6849ea91bffe0ab7864,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+27199325ec5c45260b9ea6849ea91bffe0ab7864,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+27199325ec5c45260b9ea6849ea91bffe0ab7864,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+fe63c9cec4fc898aed1dfd98f7d995bb4716cba9,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+fe63c9cec4fc898aed1dfd98f7d995bb4716cba9,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+fe63c9cec4fc898aed1dfd98f7d995bb4716cba9,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+c0c21ebd910bcacf214f23121dabcbf82463d127,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+c0c21ebd910bcacf214f23121dabcbf82463d127,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+c0c21ebd910bcacf214f23121dabcbf82463d127,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+1e988c10f9ea5c5f1c4b9c83c0628d0c2fb790ed,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+1e988c10f9ea5c5f1c4b9c83c0628d0c2fb790ed,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+1e988c10f9ea5c5f1c4b9c83c0628d0c2fb790ed,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+0a61d7b06729bec9906ec99fca9d9e9c8cd9f9eb,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getKing (  ),getKing ( KingdomFactory  factory )
+0a61d7b06729bec9906ec99fca9d9e9c8cd9f9eb,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getCastle (  ),getCastle ( KingdomFactory  factory )
+0a61d7b06729bec9906ec99fca9d9e9c8cd9f9eb,abstract-factory/src/main/java/com/iluwatar/abstractfactory/App.java,getArmy (  ),getArmy ( KingdomFactory  factory )
+dbc2acae5ffa2d3770c98f9161a97010379f573e,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+8d429525dcb752db7854f0695630c1a98eb17b76,reactor/src/main/java/com/iluwatar/reactor/app/LoggingHandler.java,"sendReply ( AbstractNioChannel  channel, SelectionKey  key )","sendReply ( AbstractNioChannel  channel, DatagramPacket  incomingPacket, SelectionKey  key )"
+ec8203a196106ac6cbb732775af153ff4b15dfd6,reactor/src/main/java/com/iluwatar/reactor/App.java,tcpChannel ( int  port ),"tcpChannel ( int  port, ChannelHandler  handler )"
+ec8203a196106ac6cbb732775af153ff4b15dfd6,reactor/src/main/java/com/iluwatar/reactor/App.java,udpChannel ( int  port ),"udpChannel ( int  port, ChannelHandler  handler )"
+ec8203a196106ac6cbb732775af153ff4b15dfd6,reactor/src/main/java/com/iluwatar/reactor/AppClient.java,writeLogs ( PrintWriter  writer ),"writeLogs ( PrintWriter  writer, InputStream  inputStream )"
+d3f2ea22ac422ddac4d7d9733c45e3ebc46e6001,reactor/src/main/java/com/iluwatar/reactor/NioReactor.java,handle (  ),handle ( SelectableChannel  channel )
+d3f2ea22ac422ddac4d7d9733c45e3ebc46e6001,reactor/src/main/java/com/iluwatar/reactor/NioReactor.java,handle (  ),handle ( SelectableChannel  channel )
+d3f2ea22ac422ddac4d7d9733c45e3ebc46e6001,reactor/src/main/java/com/iluwatar/reactor/NioReactor.java,handle (  ),handle ( SelectableChannel  channel )
+b2bfdb1752d2eff2d1b7abf6e62a9ce8b08a3610,dependency-injection/src/main/java/com/iluwatar/Tobacco.java,smoke (  ),smoke ( Wizard  wizard )

@@ -10,6 +10,10 @@ import os
 import re
 
 def get_valid_filename(repo_name):
+  '''
+     Input: repository name (string)
+     Returns: a valid file name created from the input string 
+  '''
   # Remove invalid characters
   valid_filename = re.sub('[^0-9a-zA-Z_]', '', repo_name)
 
@@ -19,6 +23,16 @@ def get_valid_filename(repo_name):
   return valid_filename
 
 def check_ratelimit(git_instance):
+  '''
+     An user is granted 5000 api requests per hour. This function checks 
+     the rate limit of GitHub api(s) remaining for a given user. If at all
+     the remaining rate limit reaches 0 within the alloted hour, then the
+     function halts the program by going into sleep mode until the rate 
+     limit is restored.[A VERY RARE CASE]
+     
+     Note: I have used this function to be on the safer side if in case
+           the rate limit reaches as low as 10.
+  '''
   remaining, total = git_instance.rate_limiting
   print "You have ", remaining, " api request\n" 
   if remaining < 10:
@@ -35,8 +49,12 @@ def get_url(repo_name, commit_sha, file_path):
 
 
 def download_url_content(url):
+   '''
+      This function downloads the Java source code at a 
+      specific commit point.
+   '''
    # removed token for commit purpose
-   token = "995679a2a0e66b1e5f7076fbe04e5be86c0736ce"
+   token = "<token>"
 
    request = Request(url)
    request.add_header('Authorization', 'token %s' % token)
@@ -44,6 +62,10 @@ def download_url_content(url):
    return response.read()
 
 def get_str_method_signature(meth_name, parameters_list):
+  '''
+     This function returns the signature of a method found in
+     MethodDeclaration object in string format.
+  '''
   method_sig = meth_name + " " + "( "
   for parameter in parameters_list:
       parameter_type = parameter.type
@@ -57,8 +79,8 @@ def get_str_method_signature(meth_name, parameters_list):
   return method_sig
 
 def main():
-  user = "akarshrain@gmail.com"
-  pswd = getpass.getpass("Password?")
+  user = raw_input("Enter your email address:")
+  pswd = getpass.getpass("Enter Password:")
   g = Github(user, pswd)
 
   with open("repositories.txt") as f:
@@ -78,7 +100,7 @@ def main():
     valid_filename = get_valid_filename(repo_name)
 
     outcsv = open(abs_path + "/" + valid_filename + ".csv", 'wb')
-    writer = csv.writer(outcsv)
+    writer = csv.writer(outcsv,  delimiter=',', dialect='excel')
     writer.writerow(["Commit SHA", "Java File", "Old function signature", "New function signature"])
     total_commits = len(list(all_commits))
 
@@ -86,7 +108,19 @@ def main():
     for index in range(1, total_commits):
        check_ratelimit(g)
        print "Processing commit ", index, " of ", total_commits 
-       comp = repo.compare(all_commits[index].sha, all_commits[index-1].sha)
+       try:
+        comp = repo.compare(all_commits[index].sha, all_commits[index-1].sha)
+       except:
+         '''
+            Here, there can be error(s) in comparing two commits due to following reasons:
+            1. A file was deleted in the new commit
+            2. There was no common ancestor for the two commits
+            
+            The above two errors can be ignored as it is not relevant to us and does not affect
+            the goal of the intended task.
+         '''
+         print "Error in comparing commit"
+         continue
 
        for file in comp.files:
          if file.filename.split('.')[-1] == 'java':
@@ -99,11 +133,15 @@ def main():
               ver_one_src_code = download_url_content(prev_changes_url)
               ver_two_src_code = download_url_content(new_changes_url)
               file_read_success = True
-            except HTTPError as e:
+            except:
               file_read_success = False
 
             if(file_read_success):
               try:
+                '''
+                   Here, an Abstract Syntax Tree is generated for each version 
+                   of the Java source code using javalang parser.
+                '''
                 old_syntax_tree = javalang.parse.parse(ver_one_src_code)
                 new_syntax_tree = javalang.parse.parse(ver_two_src_code)
 
@@ -125,7 +163,6 @@ def main():
                       print "Old Signature: ", old_meth_sig, "\n"
                       print "New Signature: ", new_meth_sig, "\n"
                       writer.writerow([all_commits[index-1].sha, file.filename, old_meth_sig, new_meth_sig])
-
               except:
                 print "Bad java source code\n"
 
