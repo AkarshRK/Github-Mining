@@ -45,15 +45,14 @@ The result will be a csv file and there will be three columns, namely "Commit SH
 
 ## My test results
 The above program is executed and tested on following top Java repositories:
+
 | Repository | Description | Number of commits |
-| ------ | ------ | ------ |
+| --- | --- | --- |
 | iluwatar/java-design-patterns | Design patterns implemented in Java http://java-design-patterns.com | 2,168 |
 | PhilJay/MPAndroidChart | A powerful Android chart view / graph view library, supporting line- bar- pie- radar- bubble- and candlestick charts as well as scaling, dragging and animations. (Written in Java) | 2,003 |
 | junit-team/junit4| A programmer-oriented testing framework for Java. https://junit.org/junit4/ | 2,359 |
 | AkarshRK/Java-Prog | Short sample test code for Github-Mining project.| 9 |
 
 The report files can be found in "report/" directory.
-
-
 	
 
